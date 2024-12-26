@@ -38,7 +38,7 @@ class SMPL(nn.Module):
     def __init__(self, model_path, model_type='smpl', dtype=torch.float32):
         super(SMPL, self).__init__()
         self.dtype = dtype
-        model_info = torch.load(model_path)
+        model_info = torch.load(model_path, weights_only=True)
 
         self.vertex_joint_selector = VertexJointSelector(model_info['extra_joints_index'], \
             model_info['J_regressor_extra9'], model_info['J_regressor_h36m17'], dtype=self.dtype)
