@@ -6,7 +6,7 @@ import numpy
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
-requireds = ["opencv-python","torch",
+requireds = ["opencv-python-headless","torch",
         'setuptools>=18.0.0',
         'cython',
         'numpy>=1.21.0',
